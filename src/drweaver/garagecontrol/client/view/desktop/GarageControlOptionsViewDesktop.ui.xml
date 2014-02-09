@@ -1,0 +1,29 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+		.state-label {
+			font-style: italic;
+			padding-left: 200px;
+		}
+		.big {
+			font-size: xx-large;
+		}
+		.big-button {
+			height: 100px;
+			font-size: 20pt;
+			width: 200px;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<center>
+			<g:HorizontalPanel spacing="20" >
+				<g:Button addStyleNames='{style.big-button}' text="Refresh" ui:field="buttonRefresh" />
+				<g:Button addStyleNames='{style.big-button}' text="Log out" ui:field="buttonLogout" />
+			</g:HorizontalPanel>
+		</center>
+	</g:HTMLPanel>
+</ui:UiBinder> 

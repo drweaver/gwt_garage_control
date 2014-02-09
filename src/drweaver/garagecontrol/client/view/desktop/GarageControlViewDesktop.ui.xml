@@ -1,0 +1,45 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style type='drweaver.garagecontrol.client.view.GarageControlViewBase.Style'>
+		.important {
+			font-weight: bold;
+		}
+		.state-label {
+			font-style: italic;
+			padding-left: 200px;
+		}
+		.big {
+			font-size: xx-large;
+		}
+		.big-button {
+			height: 200px;
+			font-size: 50pt;
+		}
+		.hidden {
+			visibility:hidden;
+		}
+	</ui:style>
+	
+	<ui:with field='res' type='drweaver.garagecontrol.client.res.Resources'/>
+	
+	<g:HTMLPanel>
+		<br/>
+		<br/>
+		<center>
+		<g:VerticalPanel horizontalAlignment="left">
+			<g:HorizontalPanel spacing="15" verticalAlignment="middle">
+				<g:Label  addStyleNames='{style.big} {style.state-label}'>Garage Door is:</g:Label>
+					<g:Label addStyleNames='{style.big}' ui:field="labelState">Loading...</g:Label>
+					<g:Image resource='{res.spinner}' addStyleNames='{style.hidden}' ui:field="imageSpinner" />
+			</g:HorizontalPanel>
+			<g:HorizontalPanel spacing="20" >
+				<g:Button addStyleNames='{style.big-button}' text="Open" ui:field="buttonOpen"  width="400px"/>
+				<g:Button addStyleNames='{style.big-button}' text="Stop" ui:field="buttonStop" width="200px"/>
+				<g:Button addStyleNames='{style.big-button}' text="Close" ui:field="buttonClose"  width="400px"/>
+				
+			</g:HorizontalPanel>
+		</g:VerticalPanel>
+		</center>
+	</g:HTMLPanel>
+</ui:UiBinder> 
