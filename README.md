@@ -1,18 +1,13 @@
 GWT Garage Control
 ==================
 
-Web app component for py_garage_server written using Google Web Toolkit
+Web app component for [py_garage_server](https://github.com/drweaver/py_garage_server) 
+written using [Google Web Toolkit](http://www.gwtproject.org/)
 
-Required for https://github.com/drweaver/py_garage_server
-
-See  http://www.gwtproject.org/ for help in setup / building
-
-Support for mobile and desktop views - technique 
-taken from https://code.google.com/p/google-web-toolkit/ samples (FormFactor)
+Support for mobile and desktop views - using FormFactor technique taken 
+from [GWT Samples](https://code.google.com/p/google-web-toolkit/)
  
-Pre-compiled files can be found at https://github.com/drweaver/gwt_garage_control/releases/latest
-named garagecontrol-client.zip
+Pre-compiled files [garagecontrol-client.zip](https://github.com/drweaver/gwt_garage_control/releases/latest)
 
 Sample screenshot taken from a mobile browser:
-
 ![Alt screenshot](https://raw.github.com/drweaver/gwt_garage_control/master/mobile-screenshot.png)
