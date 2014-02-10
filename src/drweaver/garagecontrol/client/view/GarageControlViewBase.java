@@ -61,7 +61,7 @@ public class GarageControlViewBase extends Composite implements GarageControlVie
 	}
 
 	@Override
-	private void setButtonsEnabled(boolean enabled) {
+	public void setButtonsEnabled(boolean enabled) {
 		buttonOpen.setEnabled(enabled);
 		buttonStop.setEnabled(enabled);
 		buttonClose.setEnabled(enabled);

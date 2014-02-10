@@ -1,0 +1,6 @@
+language: java
+jdk:
+  - oraclejdk6
+script: ant gwtc
+
+
