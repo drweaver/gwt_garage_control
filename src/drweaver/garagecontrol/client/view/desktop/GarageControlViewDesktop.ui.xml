@@ -19,6 +19,9 @@
 		.hidden {
 			visibility:hidden;
 		}
+		.inError {
+			color:red;
+		}
 	</ui:style>
 	
 	<ui:with field='res' type='drweaver.garagecontrol.client.res.Resources'/>

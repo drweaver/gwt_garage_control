@@ -15,6 +15,7 @@ public class GarageControlViewBase extends Composite implements GarageControlVie
 
 	public interface Style extends CssResource {
 		String hidden();
+		String inError();
 	}
 
 	@UiField
@@ -59,7 +60,8 @@ public class GarageControlViewBase extends Composite implements GarageControlVie
 		return !imageSpinner.getStyleName().contains(style.hidden());
 	}
 
-	private void setButtonsState(boolean enabled) {
+	@Override
+	private void setButtonsEnabled(boolean enabled) {
 		buttonOpen.setEnabled(enabled);
 		buttonStop.setEnabled(enabled);
 		buttonClose.setEnabled(enabled);
@@ -72,7 +74,7 @@ public class GarageControlViewBase extends Composite implements GarageControlVie
 
 	public void open() {
 		setProgressState(true);
-		setButtonsState(false);
+		setButtonsEnabled(false);
 		if( presenter != null ) {
 			presenter.open();
 		}
@@ -85,7 +87,7 @@ public class GarageControlViewBase extends Composite implements GarageControlVie
 
 	public void stop() {
 		setProgressState(true);
-		setButtonsState(false);
+		setButtonsEnabled(false);
 		presenter.stop();
 	}
 
@@ -96,7 +98,7 @@ public class GarageControlViewBase extends Composite implements GarageControlVie
 
 	public void close() {
 		setProgressState(true);
-		setButtonsState(false);
+		setButtonsEnabled(false);
 		if( presenter != null ) {
 			presenter.close();
 		}
@@ -115,7 +117,16 @@ public class GarageControlViewBase extends Composite implements GarageControlVie
 	@Override
 	public void setState(String state) {
 		setProgressState(false);
-		setButtonsState(true);
+		setButtonsEnabled(true);
 		labelState.setText(state);
+	}
+	
+	@Override
+	public void setErrorState(boolean errorState) {		
+		if( errorState ) {
+			labelState.addStyleName(style.inError());
+		} else {
+			labelState.removeStyleName(style.inError());
+		}
 	}
 }

@@ -14,6 +14,10 @@ public interface GarageControlView extends IsWidget {
 
 	boolean isInProgress();
 
+	void setErrorState(boolean errorState);
+	
+	void setButtonsEnabled(boolean enabled);
+	
 	interface Presenter {
 		void open();
 		void stop();

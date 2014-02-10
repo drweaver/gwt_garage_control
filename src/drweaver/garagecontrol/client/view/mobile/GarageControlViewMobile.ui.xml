@@ -17,6 +17,9 @@
 		.hidden {
 			visibility:hidden;
 		}
+		.inError {
+			color:red;
+		}
 		
 	</ui:style>
 	

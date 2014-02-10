@@ -58,6 +58,7 @@ public class GarageControlAction implements StateChangedHandler, GarageControlOp
 			} else {
 				stopRefresh();
 			}
+			controlView.setErrorState(false);
 			controlView.setState(state.toString());
 		} else {
 			stopRefresh();
@@ -84,10 +85,13 @@ public class GarageControlAction implements StateChangedHandler, GarageControlOp
 	public void onError(String error) {
 		errorCount++;
 		if( errorCount % 10 == 0 ) {
+			// don't refresh forever
 			stopRefresh();
 		}
-		controlView.setState("ERROR: " +error);
-		if( error.equals("0") ) {
+		controlView.setErrorState(true);
+		controlView.setProgressState(false);
+		controlView.setButtonsEnabled(true);
+		if( errorCount % 3 == 0 &&  error.equals("0") ) {
 			// likely the auth is old and needs refreshing
 			Window.Location.reload();
 		}
