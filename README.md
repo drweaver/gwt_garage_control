@@ -1,5 +1,6 @@
-GWT Garage Control
-==================
+[![Build Status](https://travis-ci.org/drweaver/gwt_garage_control.png?branch=master)](https://travis-ci.org/drweaver/gwt_garage_control)
+
+##GWT Garage Control
 
 Web app component for [py_garage_server](https://github.com/drweaver/py_garage_server) 
 written using [Google Web Toolkit](http://www.gwtproject.org/)
