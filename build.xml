@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<project name="Foo" default="build" basedir=".">
+<project name="gwt_garage_control" default="build" basedir=".">
   <!-- Configure path to GWT SDK -->
   <property name="gwt.sdk.version" value="2.4.0" />
   <property name="gwt.sdk" location="gwt-${gwt.sdk.version}" />
